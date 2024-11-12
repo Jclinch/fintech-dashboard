@@ -1,0 +1,57 @@
+.shadow-left {
+    box-shadow: -5px 0 10px rgba(167, 166, 166, 0.1); /* Left side shadow */
+}
+
+.left-side{
+    margin-top: -120px;
+}
+
+.form {
+    margin-top: -90px;
+    .header{
+        font-size: 40px;
+        font-weight: 700 ;
+        color: #213F7D;
+
+    }
+    .description{
+        font-size: 20px;
+        font-weight: 400 ;
+        color: #545F7D;
+        margin-bottom: 50px;
+    }
+    .input {
+        width: 447px;
+        height: 50px;
+        border: 2px #545F7D26 ;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .button{
+        background-color: #39CDCC;
+        color: white;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        width: 447px
+    }
+}
+
+.footer {
+    display: flex; 
+    flex-direction: row; 
+    margin-top: 200px;
+    width: 100%;
+    justify-content: center;
+    
+    .link-description {
+      font-size: 12px; // Set font size for link-description
+    }
+  
+    .form-link {
+      font-size: 12px; // Set font size for form-link
+      color: #39CDCC; // Set color to blue for form-link
+      margin-left: 15px; // Optional: Add space between link-description and form-link
+    }
+  }
+  
