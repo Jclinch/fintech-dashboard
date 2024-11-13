@@ -1,3 +1,4 @@
+//path: lendsqr-fe-test\constants\index.ts
 export const sidebarLinks = [
    // Dashboard
     
@@ -41,28 +42,17 @@ export const sidebarLinks = [
         route: "/karma",
         label: "Karma",
     },
+       
+]
+
+export const links = [
+    {
+        route: "/userDetails",
+        label: "user details",
+    },
+    
 ]
 
 
-
  
- {/*
-     
-Whitelist 
-Karma 
-//businesses
-Organization 
-Loan Products 
-Savings Products 
-Fees and Charges 
-Transactions 
-Services 
-Service Account 
-Settlements 
-Reports 
-//setings
-Preferences
-Fees and Pricing 
-Audit Logs
-
-*/}
+ 

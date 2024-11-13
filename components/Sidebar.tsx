@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import "./styles/sidebar.scss"; 
-import { useState } from "react";
+// import { useState } from "react";
 import { SwitchOrg } from "./SwitchOrg";
 import { Organization } from "./businesses/Organization";
 import { LoanProducts } from "./businesses/LoanProducts";
@@ -18,7 +18,7 @@ import { Services } from "./businesses/Services";
 import { ServiceAccount } from "./businesses/Service Account";
 import { Reports } from "./businesses/Reports";
 import { Settlement } from "./businesses/Settlement";
-import Settings from "./settings/settings";
+// import Settings from "./settings/settings";
 import { Button } from "./ui/button";
 
 

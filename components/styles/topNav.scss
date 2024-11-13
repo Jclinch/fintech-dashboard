@@ -1,0 +1,29 @@
+// Styles for the search bar and related elements
+
+.search-bar {
+    flex: 1;
+    max-width: 28rem; // equivalent to max-w-md in Tailwind
+    margin: 0 1rem; // equivalent to mx-4
+  }
+  
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6; // bg-gray-100
+    border-radius: 0.5rem; // rounded-lg
+    overflow: hidden;
+  }
+  
+  .input {
+    flex-grow: 1;
+    padding: 0.5rem 1rem; // px-4 py-2
+    background-color: #f3f4f6; // bg-gray-100
+    outline: none;
+  }
+  
+  .search-button {
+    padding: 0.75rem 1rem; // px-4 py-2
+    background-color: #38b2ac; // bg-teal-500
+    color: #fff; // text-white
+  }
+  
