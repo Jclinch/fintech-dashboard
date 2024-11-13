@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import "@/components/styles/topNav.scss"
+import { User } from "@/types/User";
 
 interface User {
   name: string;

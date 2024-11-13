@@ -4,13 +4,16 @@ import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
 import TopNav from "@/app/(root)/TopNav";
 import React from "react";
+import { User } from "@/types/User";
+
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedInUser = {
+  const loggedInUser: User = {
     name: "Adedeji",
     email: "test@testmail.com",
     avatarUrl: "/avatars/user-img.png",

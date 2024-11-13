@@ -22,7 +22,7 @@ export function LoanProducts() {
       <DropdownMenuTrigger asChild>
       <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
       <Image
-            src="/icons/switch-org.png"
+            src="/icons/loan-prod.png"
             alt="Switch Loan Product Icon"
             width={18}
             height={18}

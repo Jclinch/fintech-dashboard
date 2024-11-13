@@ -36,45 +36,16 @@ const AuthForm = ({ type }: { type: string }) => {
     },
   });
 
-  // define the submit handler
-  //===
-//   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-//     setIsLoading(true);
-
-//     try {
-//       if (type === "sign-up") {
-//         const newUser = await signUp(data);
-//         // Redirect to homepage on successful sign-up response
-//         setUser(newUser);
-//       }
-
-//       if (type === "login") {
-//         const response = await login({
-//           email: data.email,
-//           password: data.password,
-//         });
-
-//         // Redirect to homepage on successful login response
-//         if (response) {
-//           router.push("/"); // Redirects to homepage
-//         }
-//       }
-//     } catch (error) {
-//       console.error(error);
-//     } finally {
-//       setIsLoading(false);
-//     }
-//   };
-//===
-
+  
 const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsLoading(true);
-  
+    // not in use now as we are only focusing on the login auth
     try {
       if (type === "sign-up") {
         const newUser = await signUp(data);
         // Redirect to dashboard on successful sign-up
         if (newUser) {
+          setUser(newUser); // Set the user after sign-up
           router.push("/");
         }
       }
@@ -121,11 +92,7 @@ const onSubmit = async (data: z.infer<typeof formSchema>) => {
         <div className="form">
           <header>
             <h1 className="header">Welcome!</h1>
-            {/* {type === "login" ? "/sign-up" : "/login"}
-              className="form-link"
-            >
-              {type === "login" ? "Sign Up" : "Login"} */}
-
+           
             <p className="description text-[20px] text-[#545F7D]">
                 {user ? "LOG IN" : type === "login" ? "Enter details to login" : "Fill form to Sign Up"}
                 </p>

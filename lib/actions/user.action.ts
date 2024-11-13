@@ -1,29 +1,11 @@
-// //path: lendsqr-fe-test\lib\actions\user.action.ts
-// 'use server'
-
-// export const login = async () => {
-//     try {
-//         //some actions here | mutation, db, make fetch
-//     } catch (error) {
-//         console.error('Error', error);
-//     }
-// }
-
-
-// export const signUp = async (userData: SignUpParams) => {
-//     try {
-//         //create/import mock user account
-//     } catch (error) {
-//         console.error('Error', error);
-//     }
-// }
-
-
-//===
-
 import { signUp as signUpApi, login as loginApi } from "@/lib/api";
 
-export const signUp = async (userData: any) => {
+interface UserData {
+  email: string;
+  password: string;
+}
+
+export const signUp = async (userData: UserData) => {
   try {
     const result = await signUpApi(userData);
     if (result.status === "success") {
@@ -37,7 +19,7 @@ export const signUp = async (userData: any) => {
   }
 };
 
-export const login = async (userData: any) => {
+export const login = async (userData: UserData) => {
   try {
     const result = await loginApi(userData);
     if (result.status === "success") {

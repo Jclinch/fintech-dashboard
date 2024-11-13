@@ -267,7 +267,7 @@ const Home = () => {
             <tr key={index}>
               <td>{user.organization}</td>
               <td>
-   <Link href="./userDetails" passHref>
+   <Link href={`/userDetails/${user.id}`} passHref>
    {user.username}
    </Link>
    </td>

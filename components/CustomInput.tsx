@@ -1,42 +1,42 @@
 //path: lendsqr-fe-test\components\CustomInput.tsx
-import { authFormSchema } from '@/lib/utils'
-import React from 'react'
-import { FormControl, FormField, FormMessage } from './ui/form'
-import { Input } from './ui/input'
-import { z } from 'zod'
+import React from 'react';
+import { FormControl, FormField, FormMessage } from './ui/form';
+import { Input } from './ui/input';
+import { z } from 'zod';
+import { authFormSchema } from '@/lib/utils';
+import { Control, FieldPath } from 'react-hook-form';
 import "./styles/auth-style.scss";
-import { Control, FieldPath } from 'react-hook-form'
 
-const formSchema = authFormSchema("login")
+// Define the formSchema type without assigning a value
+type FormSchema = z.infer<ReturnType<typeof authFormSchema>>;
 
-interface CustomInput {
-    control: Control<z.infer<typeof formSchema>>
-    name: FieldPath<z.infer<typeof formSchema>>
-    placeholder: string
+interface CustomInputProps {
+  control: Control<FormSchema>;
+  name: FieldPath<FormSchema>;
+  placeholder: string;
 }
 
-const CustomInput = ({control, name, placeholder }: CustomInput) => {
+const CustomInput = ({ control, name, placeholder }: CustomInputProps) => {
   return (
-      
-      <FormField
-  control={control}
-  name={name}
-  render={({ field }) => (
-      <div>
-      <FormControl>
-        <div className=" input ">
-        <Input 
-        placeholder={placeholder}
-        type={name === "password" ? "password" : "text"}
-        {...field} />
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <div>
+          <FormControl>
+            <div className="input">
+              <Input
+                placeholder={placeholder}
+                type={name === "password" ? "password" : "text"}
+                {...field}
+              />
+            </div>
+          </FormControl>
+          <FormMessage />
         </div>
+      )}
+    />
+  );
+};
 
-      </FormControl>
-      <FormMessage />
-      </div>
-  )}
-/>
-  )
-}
-
-export default CustomInput
+export default CustomInput;
