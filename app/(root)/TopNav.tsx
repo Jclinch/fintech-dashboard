@@ -46,7 +46,10 @@ const TopNav: React.FC<TopNavProps> = ({ user }) => {
 
       {/* Right side - Links and Icons */}
       <div className="flex items-center gap-6">
-        <Link href="/docs" className="text-gray-600 hover:underline">
+        <Link
+          href="https://docs.google.com/document/d/121Npoqs_xsoRVTg55a25eafKbHrGGyI5nbMuswcmp90/edit?usp=sharing"
+          className="text-gray-600 hover:underline"
+        >
           Docs
         </Link>
 
