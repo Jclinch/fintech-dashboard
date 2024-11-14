@@ -49,13 +49,11 @@ const AuthForm = ({ type }: AuthFormProps) => {
       }
 
       if (type === "login") {
-        const response = await login({
+         await login({
           email: data.email,
           password: data.password,
         });
-        if (response) {
-          router.push("/");
-        }
+       router.push("/")
       }
     } catch (error) {
       console.error(error);
