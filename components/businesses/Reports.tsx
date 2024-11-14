@@ -22,7 +22,7 @@ export function Reports() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
             <Image
-            src="/icons/reports.png"
+            src="/icons/report.png"
             alt="Switch Reports Icon"
             width={18}
             height={18}

@@ -5,12 +5,6 @@
   width: 283px;
   margin-top: 50px;
 
-  // Logo section styling
-  // &-logo {
-  // //   font-size: 1.25rem;
-  //   font-weight: bold;
-  // }
-
   .sidebar-link {
     display: flex;
     align-items: center;
@@ -21,6 +15,19 @@
     text-decoration: none;
     color: #213f7d;
     margin-bottom: -10px;
+    width: 100%; /* Fixed width for alignment */
+    transition: color 0.3s ease;
+    
+
+    :hover {
+      width: 100%;
+      background: #CAF2F2;
+      color: #213f7d;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      // margin-bottom: -10px;
+    }
 
     &.background {
       background: #39cdcd44;

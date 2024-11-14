@@ -16,7 +16,7 @@ export default function RootLayout({
   const loggedInUser: User = {
     name: "Adedeji",
     email: "test@testmail.com",
-    avatarUrl: "/avatars/user-img.png",
+    // avatarUrl: "/avatars/user-img.png",
   };
 
   return (

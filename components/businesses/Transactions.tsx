@@ -22,7 +22,7 @@ export function Transactions() {
       <DropdownMenuTrigger asChild>
       <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
       <Image
-            src="/icons/switch-org.png"
+            src="/icons/transaction.png"
             alt="Switch Transactions Icon"
             width={18}
             height={18}

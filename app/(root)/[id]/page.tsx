@@ -1,8 +1,16 @@
-// components/userDetails.js
-import "@/components/styles/userDetails.scss";
+// app/(root)/[id]/page.tsx
 import Image from "next/image";
+import { users } from "../../../constants/sampleData";
+import "@/components/styles/userDetails.scss";
 
-const UserDetails = () => {
+export default function Page({ params }: { params: { id: string } }) {
+  // Find the user based on the `id` parameter
+  const user = users.find((user) => user.id === params.id);
+
+  if (!user) {
+    return <div>User not found</div>;
+  }
+
   return (
     <div className="container">
       <div className="header">
@@ -37,11 +45,11 @@ const UserDetails = () => {
             />
           </div>
           <div className="name">
-            <h2 className="userName">Grace Effiom</h2>
+            <h2 className="userName">{user.username}</h2>
             <p className="userId">LSQF587g90</p>
           </div>
           <div className="tier">
-            <p className="userTier">User’s Tier</p>
+            <p className="userTier">User&apos;s Tier</p>
             <p className="star"> ★★☆☆</p>
           </div>
           <div className="balanceInfo">
@@ -67,23 +75,23 @@ const UserDetails = () => {
           <div className="info-grid">
             <div className="info-item">
               <p className="label">FULL NAME</p>
-              <p>Grace Effiom</p>
+              <p>{user.username}</p>
             </div>
             <div className="info-item">
               <p className="label">PHONE NUMBER</p>
-              <p>07060780922</p>
+              <p>{user.phoneNumber}</p>
             </div>
             <div className="info-item">
               <p className="label">EMAIL ADDRESS</p>
-              <p>grace@gmail.com</p>
+              <p>{user.email}</p>
             </div>
             <div className="info-item">
               <p className="label">BVN</p>
-              <p>07060780922</p>
+              <p>{user.phoneNumber}</p>
             </div>
             <div className="info-item">
               <p className="label">GENDER</p>
-              <p>Female</p>
+              <p>{user.gender}</p>
             </div>
             <div className="info-item">
               <p className="label">MARITAL STATUS</p>
@@ -121,7 +129,7 @@ const UserDetails = () => {
             </div>
             <div className="info-item">
               <p className="label">OFFICE EMAIL</p>
-              <p>grace@lendsqr.com</p>
+              <p>{user.email}</p>
             </div>
             <div className="info-item">
               <p className="label">MONTHLY INCOME</p>
@@ -143,7 +151,7 @@ const UserDetails = () => {
             </div>
             <div className="info-item">
               <p className="label">FACEBOOK</p>
-              <p>Grace Effiom</p>
+              <p>{user.username}</p>
             </div>
             <div className="info-item">
               <p className="label">INSTAGRAM</p>
@@ -176,6 +184,4 @@ const UserDetails = () => {
       </div>
     </div>
   );
-};
-
-export default UserDetails;
+}

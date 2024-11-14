@@ -1,4 +1,3 @@
-
 .dashboard {
   padding: 20px;
   background-color: #eef1f6b1;
@@ -6,7 +5,7 @@
   h1 {
     font-size: 24px;
     font-weight: 500;
-    color: #213F7D;
+    color: #213f7d;
     margin: 40px 0;
   }
 
@@ -36,14 +35,14 @@
 
   .stat-label {
     font-size: 14px;
-    color: #213F7D;
+    color: #213f7d;
     margin-bottom: 10px;
     font-weight: 500;
   }
 
   .stat-value {
     font-size: 24px;
-    color: #213F7D;
+    color: #213f7d;
     font-weight: 600;
   }
 
@@ -51,7 +50,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    color: #213F7D;
+    color: #213f7d;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -66,44 +65,49 @@
     th {
       align-items: center; /* Aligns the text and icon vertically */
       justify-content: flex-start; /* Ensures that the text starts at the left */
-    
+
       .filter-container {
         display: flex;
-        align-items: center; 
-        width: 100%; 
-    
+        align-items: center;
+        width: 100%;
+
         margin-left: 0; /* Optional: Adjust if you need space from the left edge */
         gap: 5px; /* Optional: Adds a little space between the text and icon */
       }
-    
+
       .filter-icon {
         cursor: pointer;
         width: 16px; /* Size of the icon */
         height: 16px; /* Size of the icon */
       }
     }
-    
 
     .status {
-      padding: 4px 8px;
+      width: 80px;
+      height: 30px;
+      padding: 6px 8px;
       border-radius: 12px;
-      color: white;
       font-size: 0.875rem;
+      font-weight: 500;
 
       &.inactive {
-        background-color: gray;
+        background-color: rgba(128, 128, 128, 0.15);
+        color: gray;
       }
 
       &.pending {
-        background-color: orange;
+        background-color: rgba(255, 166, 0, 0.15);
+        color: orange;
       }
 
       &.blacklisted {
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.15);
+        color: red;
       }
 
       &.active {
-        background-color: green;
+        background-color: rgba(0, 128, 0, 0.15);
+        color: green;
       }
     }
   }
@@ -178,5 +182,66 @@
         }
       }
     }
+  }
+}
+// pagination style
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 16px;
+  float: right;
+}
+
+.arrow-button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #e0e0e0;
+  color: #213f7d;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.page-button {
+  color: #545f7d7d;
+}
+
+.page-button.active {
+  color: #262b39;
+}
+
+.arrow-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagn-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.pagination-info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #545F7D;
+  margin-top: 40px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .length {
+    background-color: #545f7d3b;
+    padding: 4px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #545F7D;
   }
 }

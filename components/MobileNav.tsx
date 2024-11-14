@@ -1,9 +1,18 @@
-import React from 'react'
+// path: components/MobileNav.tsx
+import React from "react";
+import { User } from "@/types/User";
 
-const MobileNav = () => {
-  return (
-    <div>MobileNav</div>
-  )
+interface MobileNavProps {
+  user: User;
 }
 
-export default MobileNav
+const MobileNav: React.FC<MobileNavProps> = ({ user }) => {
+  return (
+    <div>
+      <p>{user.name} - Mobile Navigation</p>
+      {/* Mobile navigation content */}
+    </div>
+  );
+};
+
+export default MobileNav;
