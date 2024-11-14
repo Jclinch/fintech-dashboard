@@ -42,6 +42,11 @@ export const sidebarLinks = [
         route: "/karma",
         label: "Karma",
     },
+    {
+        imgURL: "/icons/oranization.png",
+        route: "/organization",
+        label: "Organization",
+    },
        
 ]
 

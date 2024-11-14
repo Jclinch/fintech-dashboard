@@ -6,7 +6,6 @@ import "@/components/styles/dashboard.scss";
 import { users as sampleUsers } from "@/constants/sampleData";
 import Image from "next/image";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
 
 const formatDate = (date: string) => {
   const options: Intl.DateTimeFormatOptions = {
@@ -247,25 +246,26 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
-          {paginatedUsers.map((user, index) => (
-            <tr key={index}>
-              <td>{user.organization}</td>
-              <td>
-                <Link href={`/${user.id}`} passHref>
-                  {user.username}
-                </Link>
-              </td>
-              <td>{user.email}</td>
-              <td>{user.phoneNumber}</td>
-              <td>{formatDate(user.dateJoined.toString())}</td>
-              <td>
-                <span className={`status ${user.status.toLowerCase()}`}>
-                  {user.status}
-                </span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+  {paginatedUsers.map((user, index) => (
+    <tr key={index}>
+      <td data-label="Organization">{user.organization}</td>
+      <td data-label="Username">
+        <Link href={`/${user.id}`} passHref>
+          {user.username}
+        </Link>
+      </td>
+      <td data-label="Email">{user.email}</td>
+      <td data-label="Phone Number">{user.phoneNumber}</td>
+      <td data-label="Date Joined">{formatDate(user.dateJoined.toString())}</td>
+      <td data-label="Status">
+        <span className={`status ${user.status.toLowerCase()}`}>
+          {user.status}
+        </span>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
       </table>
 
 {/* Pagination and Page Info */}
@@ -285,15 +285,38 @@ const Home = () => {
   >
     &lt;
   </button>
-  {Array.from({ length: totalPages }, (_, i) => (
-    <button
-      key={i}
-      onClick={() => handlePageChange(i + 1)}
-      className={`page-button ${currentPage === i + 1 ? "active" : ""}`}
-    >
-      {i + 1}
-    </button>
-  ))}
+  {currentPage > 2 && (
+    <>
+      <button onClick={() => handlePageChange(1)} className="page-button">
+        1
+      </button>
+      {currentPage > 3 && <span className="ellipsis">...</span>}
+    </>
+  )}
+  {Array.from({ length: totalPages }, (_, i) => i + 1)
+    .filter(
+      (page) =>
+        page === currentPage ||
+        page === currentPage - 1 ||
+        page === currentPage + 1
+    )
+    .map((page) => (
+      <button
+        key={page}
+        onClick={() => handlePageChange(page)}
+        className={`page-button ${currentPage === page ? "active" : ""}`}
+      >
+        {page}
+      </button>
+    ))}
+  {currentPage < totalPages - 1 && (
+    <>
+      {currentPage < totalPages - 2 && <span className="ellipsis">...</span>}
+      <button onClick={() => handlePageChange(totalPages)} className="page-button">
+        {totalPages}
+      </button>
+    </>
+  )}
   <button
     onClick={() => handlePageChange(currentPage + 1)}
     disabled={currentPage === totalPages}
@@ -302,6 +325,7 @@ const Home = () => {
     &gt;
   </button>
 </div>
+
 </div>
 
 
@@ -394,5 +418,6 @@ const Home = () => {
 // }
 
 export default Home;
+
 
 
