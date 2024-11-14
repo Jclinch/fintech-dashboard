@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+##Lendsqr Frontend Test Project
 
-## Getting Started
+#This is a frontend project for a Lendsqr application test, created using the Next.js framework and designed to match a Figma design provided for the test.
 
-First, run the development server:
+Project Overview
+The main purpose of this project is to replicate the Figma design provided for the test and create a functional frontend using mock data for authentication. This app includes key components like user authentication, role-based access, a dashboard with user details, and various navigational elements.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
+User Authentication: Login functionality using mock data with role-based access.
+Dashboard: Displays user information and includes sample data, quick filter functionality for user search, and pagination for better navigation across pages.
+User Details Report: Detailed view of individual user information.
+Navigation: Includes both a top and side navigation for easy access across the application.
+Getting Started
+To run the project locally, follow these instructions:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Prerequisites
+Ensure you have Node.js installed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Installation
+Clone the repository and install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open http://localhost:3000 in your browser to view the app.
 
-## Learn More
+Authentication Details
+Mock API: Authentication is powered by mock APIs created with mocky.io.
+Login Credentials: Use the following login credentials:
+Email: test@test.com
+Password: Any password with a minimum of 8 characters
+Project Structure
+The homepage is located at app/(root)/page.tsx.
 
-To learn more about Next.js, take a look at the following resources:
+Technologies Used
+Framework: React with Next.js
+UI Library: shadcn
+Styling: Tailwind CSS and SCSS
+TypeScript: Used for type safety and improved development experience
+Deployment
+The project is deployed on Vercel and can be accessed at:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://sunny-ugwu-lendsqr-fe-test.vercel.app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Usage
+Login: Enter the credentials specified above to access the dashboard.
+Dashboard: Explore the dashboard for user details, search functionality, and pagination.
+Navigation: Use the top and side navigation bars to move through different sections of the app.
+Project Purpose
+This project was developed as part of an application test for Lendsqr.
 
-## Deploy on Vercel
+Contact Information
+For issues, feedback, or support, please reach out via:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: sunnyugwu2011@gmail.com
+Phone: 08102811912

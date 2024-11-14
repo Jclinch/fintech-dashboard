@@ -16,15 +16,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./styles/mobileNav.scss"; 
-// import { Fee } from "./businesses/Fee";
-// import { LoanProducts } from "./businesses/LoanProducts";
-// import { Organization } from "./businesses/Organization";
-// import { Reports } from "./businesses/Reports";
-// import { SavingsProduct } from "./businesses/SavingsProduct";
-// import { ServiceAccount } from "./businesses/ServiceAccount";
-// import { Services } from "./businesses/Services";
-// import { Settlement } from "./businesses/Settlement";
-// import { Transactions } from "./businesses/Transactions";
 
 interface MobileNavProps {
   user: User;
