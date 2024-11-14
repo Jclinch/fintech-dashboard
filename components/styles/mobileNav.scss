@@ -1,22 +1,33 @@
 .mobile-nav {
     width: 100%;
-    max-width: 164px;
+    // max-width: 164px;
   }
   
   // Sheet content customization
   .sheet-content {
-    border: none;
-    color: #21407d;
-    background-color: wheat; 
+    // border: none;
+    color: orange;
+    background-color:#38b2ac; 
     width: 60%; 
   }
   
   // Trigger icon styles
   .trigger-icon {
+    // border: red 2px solid;
     cursor: pointer;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 90px;
+    margin-left: 40px;
+  
+      z-index: 1000; /* Ensure the icon appears above other elements */
+    
+    
   }
+
+  .mobilenav-sheet nav {
+    max-height: calc(100vh - 100px); // Adjust to your needs
+    overflow-y: auto; // Enable scrolling
+  }
+  
   
   // Logo styles
   .logo-container {
@@ -28,7 +39,7 @@
   }
   
   .logo-title {
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
     color: #000;
   }
@@ -46,18 +57,23 @@
     background: transparent;
     cursor: pointer;
     transition: color 0.3s ease;
+    // margin-top: 300px;
   
     &:hover {
       color: #213f7d;
+      width: 100%;
+      border-radius: 10px;
     }
   
     &.active {
       background-color: #39cdcd44; // Adjust this as per the active link background
       color: #fff;
+      width: 100%;
+
   
       .icon {
         filter: brightness(3);
-        invert: 0;
+        // invert: 0;
       }
   
       .label {
@@ -69,6 +85,7 @@
       font-size: 16px;
       font-weight: 500;
       color: #213f7d;
+      margin-top: 20px;
     }
   
     .icon {

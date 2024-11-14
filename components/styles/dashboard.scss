@@ -265,7 +265,7 @@
 @media (max-width: 768px) {
   .dashboard{
   width: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   }
   h1{
     text-align: center;
@@ -286,7 +286,7 @@
   /* Make table rows display as blocks on mobile */
   .user-table {
     width: 80%;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: auto; 
   }
   
   .user-table th,

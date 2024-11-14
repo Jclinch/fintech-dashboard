@@ -145,17 +145,17 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: #213f7d; /* Change color on hover */
+      color: #213f7d; 
     }
 
     .dropdown-arrow-icon {
-      margin-left: auto; /* Position arrow to the far right */
+      margin-left: auto; 
     }
   }
 }
 
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) { 
   .sidebar {
     display: none;
   }

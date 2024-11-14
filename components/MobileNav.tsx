@@ -1,210 +1,3 @@
-// // path: components/MobileNav.tsx
-// "use client";
-// import React from "react";
-// import { User } from "@/types/User";
-// import {
-//   Sheet,
-//   SheetClose,
-//   SheetContent,
-//   SheetTitle,
-//   SheetTrigger,
-// } from "@/components/ui/sheet";
-// import { sidebarLinks } from "@/constants";
-// import { cn } from "@/lib/utils";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-
-// interface MobileNavProps {
-//   user: User;
-// }
-
-// const MobileNav: React.FC<MobileNavProps> = ({ user }) => {
-//     const pathname = usePathname();
-
-//   return (
-//     <div>
-//       {/* <p>{user.name} - Mobile Navigation</p> */}
-//       {/* Mobile navigation content */}
-//       <section className="w-[50%] max-w-[164px]">
-//       <Sheet>
-//         <SheetTrigger>
-//           <Image
-//             src="/icons/hamburger.svg"
-//             width={30}
-//             height={30}
-//             alt="menu"
-//             className="cursor-pointer"
-//           />
-//         </SheetTrigger>
-//         <SheetContent side="left" className="border-none bg-white">
-//           <SheetTitle></SheetTitle>
-//           <Link
-//             href="/"
-//             className="cursor-pointer flex items-center gap-1 px-4"
-//           >
-//             <Image
-//               src="/images/Logo.png"
-//               width={34}
-//               height={34}
-//               alt="Lendsqr Logo"
-//             />
-//             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-//             {user.name}
-//             </h1>
-//           </Link>
-//           <div className="mobilenav-sheet">
-//             <SheetClose asChild>
-//               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
-//                 {sidebarLinks.map((item) => {
-//                   const isActive =
-//                     pathname === item.route ||
-//                     pathname.startsWith(`${item.route}/`);
-
-//                   return (
-//                     <SheetClose asChild key={item.route}>
-//                       <Link
-//                         href={item.route}
-//                         key={item.label}
-//                         className={cn("mobilenav-sheet_close w-full", {
-//                           "bg-bank-gradient": isActive,
-//                         })}
-//                       >
-//                           <Image
-//                             src={item.imgURL}
-//                             alt={item.label}
-//                             width={20}
-//                             height={20}
-//                             className={cn({
-//                               "brightness-[3] invert-0": isActive,
-//                             })}
-//                           />
-//                         <p
-//                           className={cn("text-16 font-semibold text-black-2", {
-//                             " !text-white": isActive,
-//                           })}
-//                         >
-//                           {item.label}
-//                         </p>
-//                       </Link>
-//                     </SheetClose>
-//                   );
-//                 })}
-
-//                 USER
-//               </nav>
-//             </SheetClose>
-
-//             FOOTER
-//           </div>
-//         </SheetContent>
-//       </Sheet>
-//     </section>
-//     </div>
-//   );
-// };
-
-// export default MobileNav;
-// //==
-
-// // "use client";
-// // import {
-// //   Sheet,
-// //   SheetClose,
-// //   SheetContent,
-// //   SheetTitle,
-// //   SheetTrigger,
-// // } from "@/components/ui/sheet";
-// // import { sidebarLinks } from "@/constants";
-// // import { cn } from "@/lib/utils";
-// // import Image from "next/image";
-// // import Link from "next/link";
-// // import { usePathname } from "next/navigation";
-
-// // const MobileNav = () => {
-// //   const pathname = usePathname();
-// //   return (
-// //     <section className="w-full max-w-[264px]">
-// //       <Sheet>
-// //         <SheetTrigger>
-// //           <Image
-// //             src="/icons/hamburger.svg"
-// //             width={30}
-// //             height={30}
-// //             alt="menu"
-// //             className="cursor-pointer"
-// //           />
-// //         </SheetTrigger>
-// //         <SheetContent side="left" className="border-none bg-white">
-// //           <SheetTitle></SheetTitle>
-// //           <Link
-// //             href="/"
-// //             className="cursor-pointer flex items-center gap-1 px-4"
-// //           >
-// //             <Image
-// //               src="/icons/logo.svg"
-// //               width={34}
-// //               height={34}
-// //               alt="NextCash Logo"
-// //             />
-// //             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-// //               NextCash
-// //             </h1>
-// //           </Link>
-// //           <div className="mobilenav-sheet">
-// //             <SheetClose asChild>
-// //               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
-// //                 {sidebarLinks.map((item) => {
-// //                   const isActive =
-// //                     pathname === item.route ||
-// //                     pathname.startsWith(`${item.route}/`);
-
-// //                   return (
-// //                     <SheetClose asChild key={item.route}>
-// //                       <Link
-// //                         href={item.route}
-// //                         key={item.label}
-// //                         className={cn("mobilenav-sheet_close w-full", {
-// //                           "bg-bank-gradient": isActive,
-// //                         })}
-// //                       >
-// //                           <Image
-// //                             src={item.imgURL}
-// //                             alt={item.label}
-// //                             width={20}
-// //                             height={20}
-// //                             className={cn({
-// //                               "brightness-[3] invert-0": isActive,
-// //                             })}
-// //                           />
-// //                         <p
-// //                           className={cn("text-16 font-semibold text-black-2", {
-// //                             " !text-white": isActive,
-// //                           })}
-// //                         >
-// //                           {item.label}
-// //                         </p>
-// //                       </Link>
-// //                     </SheetClose>
-// //                   );
-// //                 })}
-
-// //                 USER
-// //               </nav>
-// //             </SheetClose>
-
-// //             FOOTER
-// //           </div>
-// //         </SheetContent>
-// //       </Sheet>
-// //     </section>
-// //   );
-// // };
-
-// // export default MobileNav;
-
-
-//===
 
 // path: components/MobileNav.tsx
 "use client";
@@ -223,6 +16,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./styles/mobileNav.scss"; 
+// import { Fee } from "./businesses/Fee";
+// import { LoanProducts } from "./businesses/LoanProducts";
+// import { Organization } from "./businesses/Organization";
+// import { Reports } from "./businesses/Reports";
+// import { SavingsProduct } from "./businesses/SavingsProduct";
+// import { ServiceAccount } from "./businesses/ServiceAccount";
+// import { Services } from "./businesses/Services";
+// import { Settlement } from "./businesses/Settlement";
+// import { Transactions } from "./businesses/Transactions";
 
 interface MobileNavProps {
   user: User;
@@ -231,59 +33,74 @@ interface MobileNavProps {
 const MobileNav: React.FC<MobileNavProps> = ({ user }) => {
     const pathname = usePathname();
 
+    const combinedLinks = [
+      ...sidebarLinks,
+      { route: "/fee", label: "Fee", imgURL: "/icons/fee-charges.png" },
+      { route: "/loan-products", label: "Loan Products", imgURL: "/icons/loan-prod.png" },
+      { route: "/organization", label: "Organization", imgURL: "/icons/switch-org.png" },
+      { route: "/reports", label: "Reports", imgURL: "/icons/report.png" },
+      { route: "/savings-product", label: "Savings Product", imgURL: "/icons/savings-prod.png" },
+      { route: "/service-account", label: "Service Account", imgURL: "/icons/service-acc.png" },
+      { route: "/settlement", label: "Settlement", imgURL: "/icons/settlement.png" },
+      { route: "/transactions", label: "Transactions", imgURL: "/icons/transaction.png" },
+      { route: "/services", label: "Services", imgURL: "/icons/services.png" },
+      { route: "/login", label: "Logout", imgURL: "/icons/logout.png" },
+
+    ]
+
   return (
     <div className="mobile-nav">
       <Sheet>
-        <SheetTrigger>
-          <Image
-            src="/icons/hamburger.svg"
-            width={30}
-            height={30}
-            alt="menu"
-            className="trigger-icon"
-          />
-        </SheetTrigger>
+      <SheetTrigger className="mobile-nav">
+  <Image
+    src="/icons/hamburger.svg"
+    width={40}
+    height={40}
+    alt="menu"
+    className="trigger-icon"
+  />
+</SheetTrigger>
         <SheetContent side="left" className="sheet-content">
           <SheetTitle></SheetTitle>
           <Link href="/" className="logo-container">
             <Image
               src="/images/Logo.png"
-              width={34}
-              height={34}
+              width={55}
+              height={55}
               alt="Lendsqr Logo"
             />
             <h1 className="logo-title">{user.name}</h1>
           </Link>
           <div className="mobilenav-sheet">
             <SheetClose asChild>
-              <nav className="flex h-full flex-col gap-6 pt-16 text-white">
-                {sidebarLinks.map((item) => {
-                  const isActive =
-                    pathname === item.route ||
-                    pathname.startsWith(`${item.route}/`);
+ {/* Make this nav container scrollable */}
+ <nav className="flex h-full flex-col gap-6 pt-16 text-white overflow-y-auto max-h-[calc(100vh-100px)]">
+  {combinedLinks.map((item) => {
+    const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
+    
+    // Ensure we return a single JSX element for each map iteration
+    return (
+      <SheetClose asChild key={item.route}>
+        <Link
+          href={item.route}
+          className={cn("nav-item", {
+            "active": isActive,
+          })}
+        >
+          <Image
+            src={item.imgURL}
+            alt={item.label}
+            width={20}
+            height={20}
+            className="icon"
+          />
+          <p className="label">{item.label}</p>
+        </Link>
+      </SheetClose>
+    );
+  })}
+</nav>
 
-                  return (
-                    <SheetClose asChild key={item.route}>
-                      <Link
-                        href={item.route}
-                        key={item.label}
-                        className={cn("nav-item", {
-                          "active": isActive,
-                        })}
-                      >
-                        <Image
-                          src={item.imgURL}
-                          alt={item.label}
-                          width={20}
-                          height={20}
-                          className="icon"
-                        />
-                        <p className="label">{item.label}</p>
-                      </Link>
-                    </SheetClose>
-                  );
-                })}
-              </nav>
             </SheetClose>
           </div>
         </SheetContent>
@@ -293,3 +110,5 @@ const MobileNav: React.FC<MobileNavProps> = ({ user }) => {
 };
 
 export default MobileNav;
+
+
