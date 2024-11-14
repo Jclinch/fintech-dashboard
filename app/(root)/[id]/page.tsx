@@ -43,10 +43,10 @@ export default function Page({ params }: { params: { id: string } }) {
               width={100}
               height={100}
             />
-          </div>
           <div className="name">
             <h2 className="userName">{user.username}</h2>
             <p className="userId">LSQF587g90</p>
+          </div>
           </div>
           <div className="tier">
             <p className="userTier">User&apos;s Tier</p>
