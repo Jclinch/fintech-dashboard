@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,23 +11,27 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import Image from "next/image"
+} from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 export function Transactions() {
-  const [position, setPosition] = React.useState("bottom")
+  const [position, setPosition] = React.useState("bottom");
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-      <Image
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
             src="/icons/transaction.png"
             alt="Switch Transactions Icon"
             width={18}
             height={18}
-            />
-            Transactions</Button>
+          />
+          Transactions
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 border-collapse">
         <DropdownMenuLabel>Select Transactions</DropdownMenuLabel>
@@ -39,10 +43,5 @@ export function Transactions() {
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-
-
-
-  
-
-  )
+  );
 }

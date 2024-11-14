@@ -1,12 +1,8 @@
-// path: lendsqr-fe-test\app\(root)\layout.tsx
-
 import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
 import TopNav from "@/app/(root)/TopNav";
 import React from "react";
 import { User } from "@/types/User";
-
-
 
 export default function RootLayout({
   children,
@@ -16,7 +12,6 @@ export default function RootLayout({
   const loggedInUser: User = {
     name: "Adedeji",
     email: "test@testmail.com",
-    // avatarUrl: "/avatars/user-img.png",
   };
 
   return (

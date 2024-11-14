@@ -1,7 +1,5 @@
-//path: lendsqr-fe-test\constants\index.ts
 export const sidebarLinks = [
-   // Dashboard
-    
+   
     {
         imgURL: "/icons/user.png",
         route: "/",

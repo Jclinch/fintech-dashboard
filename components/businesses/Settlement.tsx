@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,23 +11,27 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import Image from "next/image"
+} from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 export function Settlement() {
-  const [position, setPosition] = React.useState("bottom")
+  const [position, setPosition] = React.useState("bottom");
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-            <Image
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
             src="/icons/settlement.png"
             alt="Switch Settlement Icon"
             width={18}
             height={18}
-            />
-            Settlement</Button>
+          />
+          Settlement
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 border-collapse">
         <DropdownMenuLabel>Select Settlement</DropdownMenuLabel>
@@ -39,10 +43,5 @@ export function Settlement() {
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-
-
-
-  
-
-  )
+  );
 }

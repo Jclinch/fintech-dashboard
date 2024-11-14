@@ -1,6 +1,5 @@
-// path: app/(root)/TopNav.tsx
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 import "@/components/styles/topNav.scss";
 
 interface User {
@@ -35,7 +34,12 @@ const TopNav: React.FC<TopNavProps> = ({ user }) => {
             className="input"
           />
           <button className="search-button">
-            <Image src="/icons/search-icon.png" alt="Search Icon" width={16} height={16} />
+            <Image
+              src="/icons/search-icon.png"
+              alt="Search Icon"
+              width={16}
+              height={16}
+            />
           </button>
         </div>
       </div>
@@ -48,7 +52,12 @@ const TopNav: React.FC<TopNavProps> = ({ user }) => {
 
         {/* Notification icon */}
         <button className="relative">
-          <Image src="/icons/bell.png" alt="Notifications" width={20} height={20} />
+          <Image
+            src="/icons/bell.png"
+            alt="Notifications"
+            width={20}
+            height={20}
+          />
           {/* Notification badge */}
           <span className="absolute top-0 right-0 inline-block w-2.5 h-2.5 bg-red-500 rounded-full ring-2 ring-white"></span>
         </button>
@@ -63,7 +72,12 @@ const TopNav: React.FC<TopNavProps> = ({ user }) => {
             className="rounded-full"
           />
           <span className="text-gray-800 font-medium">{user.name}</span>
-          <Image src="/icons/arrow-down.png" alt="Dropdown Icon" width={12} height={12} />
+          <Image
+            src="/icons/arrow-down.png"
+            alt="Dropdown Icon"
+            width={12}
+            height={12}
+          />
         </div>
       </div>
     </nav>

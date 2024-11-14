@@ -1,4 +1,3 @@
-
 "use client";
 import { authFormSchema } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +13,7 @@ import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { z } from "zod";
 import { login, signUp } from "@/lib/actions/user.action";
-import { User } from "@/types/User"; // Ensure this path is correct
+import { User } from "@/types/User";
 import "./styles/auth-style.scss";
 
 type AuthFormProps = {
@@ -49,11 +48,11 @@ const AuthForm = ({ type }: AuthFormProps) => {
       }
 
       if (type === "login") {
-         await login({
+        await login({
           email: data.email,
           password: data.password,
         });
-       router.push("/")
+        router.push("/");
       }
     } catch (error) {
       console.error(error);
@@ -85,14 +84,18 @@ const AuthForm = ({ type }: AuthFormProps) => {
         <div className="form">
           <header>
             <h1 className="header">Welcome!</h1>
-            <p className="description text-[20px] text-[#545F7D]">
-              {user ? "LOG IN" : type === "login" ? "Enter details to login" : "Fill form to Sign Up"}
+            <p className="description ">
+              {user
+                ? "LOG IN"
+                : type === "login"
+                ? "Enter details to login"
+                : "Fill form to Sign Up"}
             </p>
           </header>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               {type === "login" && (
-                <div className="input">
+                <div className="">
                   <CustomInput
                     control={form.control}
                     name="email"
@@ -103,15 +106,20 @@ const AuthForm = ({ type }: AuthFormProps) => {
                     name="password"
                     placeholder="Password"
                   />
-                  <p className="text-[#39CDCC] text-[12px] mb-8 cursor-pointer">FORGOT PASSWORD?</p>
+                  <p className="text-[#39CDCC] text-[12px] mb-8 cursor-pointer">
+                    FORGOT PASSWORD?
+                  </p>
                   <Button type="submit" disabled={isLoading} className="button">
                     {isLoading ? (
                       <>
                         <Loader2 size={20} className="animate-spin" /> &nbsp;
                         Loading...
                       </>
-                    ) : type === "login"
-                    ? "LOG IN" : "SIGN UP"}
+                    ) : type === "login" ? (
+                      "LOG IN"
+                    ) : (
+                      "SIGN UP"
+                    )}
                   </Button>
                 </div>
               )}

@@ -1,7 +1,3 @@
-
-
-
-//--
 "use client";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
@@ -35,7 +31,10 @@ const Sidebar: React.FC<SidebarProps> = () => {
 
       {/* Dashboard */}
       <div className="sidebar-nav-item">
-        <Link href="/" className={`sidebar-nav-link ${pathname === "/" ? "active" : ""}`}>
+        <Link
+          href="/"
+          className={`sidebar-nav-link ${pathname === "/" ? "active" : ""}`}
+        >
           <Image
             src="/icons/home.png"
             alt="Dashboard Icon"
@@ -55,7 +54,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
       </div>
 
       {sidebarLinks.map((item) => {
-        const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
+        const isActive =
+          pathname === item.route || pathname.startsWith(`${item.route}/`);
         return (
           <Link
             href={item.route}
@@ -104,33 +104,65 @@ const Sidebar: React.FC<SidebarProps> = () => {
       </div>
 
       <div className="flex flex-col left-0">
-        <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-          <Image src="/icons/sliders.png" alt="Settings icon" width={16} height={16} />
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
+            src="/icons/sliders.png"
+            alt="Settings icon"
+            width={16}
+            height={16}
+          />
           Preferences
         </Button>
 
-        <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-          <Image width={16} height={16} src="/icons/badge-percent.png" alt="Fees and Pricing icon" />
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
+            width={16}
+            height={16}
+            src="/icons/badge-percent.png"
+            alt="Fees and Pricing icon"
+          />
           Fees and Pricing
         </Button>
 
-        <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-          <Image src="/icons/clipboard-list.png" width={16} height={16} alt="Audit Logs icon" />
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
+            src="/icons/clipboard-list.png"
+            width={16}
+            height={16}
+            alt="Audit Logs icon"
+          />
           Audit Logs
         </Button>
       </div>
-      
+
       {/* Divider and Logout */}
       <div className="mt-12">
         <hr />
       </div>
       <Link href="/login">
-        <Button variant="ghost" className="flex items-center justify-start text-[#213F7D] text-[16px]">
-          <Image src="/icons/logout.png" alt="Logout icon" width={16} height={16} />
+        <Button
+          variant="ghost"
+          className="flex items-center justify-start text-[#213F7D] text-[16px]"
+        >
+          <Image
+            src="/icons/logout.png"
+            alt="Logout icon"
+            width={16}
+            height={16}
+          />
           Logout
         </Button>
       </Link>
-      
+
       <div className="text-[#213F7D] text-[12px] mt-[-5px] ml-[20px]">
         v1.2.0
       </div>

@@ -1,10 +1,9 @@
-//path: lendsqr-fe-test\components\CustomInput.tsx
-import React from 'react';
-import { FormControl, FormField, FormMessage } from './ui/form';
-import { Input } from './ui/input';
-import { z } from 'zod';
-import { authFormSchema } from '@/lib/utils';
-import { Control, FieldPath } from 'react-hook-form';
+import React from "react";
+import { FormControl, FormField, FormMessage } from "./ui/form";
+import { Input } from "./ui/input";
+import { z } from "zod";
+import { authFormSchema } from "@/lib/utils";
+import { Control, FieldPath } from "react-hook-form";
 import "./styles/auth-style.scss";
 
 // Define the formSchema type without assigning a value

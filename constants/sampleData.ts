@@ -1,4 +1,3 @@
-// path: lendsqr-fe-test\constants\sampleData.ts
 export const users = [
   {
     id: "1",

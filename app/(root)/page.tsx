@@ -1,5 +1,3 @@
-// //path: lendsqr-fe-test\app\(root)\page.tsx
-
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import "@/components/styles/dashboard.scss";
@@ -246,88 +244,98 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
-  {paginatedUsers.map((user, index) => (
-    <tr key={index}>
-      <td data-label="Organization">{user.organization}</td>
-      <td data-label="Username">
-        <Link href={`/${user.id}`} passHref>
-          {user.username}
-        </Link>
-      </td>
-      <td data-label="Email">{user.email}</td>
-      <td data-label="Phone Number">{user.phoneNumber}</td>
-      <td data-label="Date Joined">{formatDate(user.dateJoined.toString())}</td>
-      <td data-label="Status">
-        <span className={`status ${user.status.toLowerCase()}`}>
-          {user.status}
-        </span>
-      </td>
-    </tr>
-  ))}
-</tbody>
-
+          {paginatedUsers.map((user, index) => (
+            <tr key={index}>
+              <td data-label="Organization">{user.organization}</td>
+              <td data-label="Username">
+                <Link href={`/${user.id}`} passHref>
+                  {user.username}
+                </Link>
+              </td>
+              <td data-label="Email">{user.email}</td>
+              <td data-label="Phone Number">{user.phoneNumber}</td>
+              <td data-label="Date Joined">
+                {formatDate(user.dateJoined.toString())}
+              </td>
+              <td data-label="Status">
+                <span className={`status ${user.status.toLowerCase()}`}>
+                  {user.status}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
 
-{/* Pagination and Page Info */}
-<div className="pagn-info">
-<div className="pagination-info">
-        <span>
-          Showing 
-          <div className="length">{paginatedUsers.length}</div> out of {totalItems}
-        </span>
+      {/* Pagination and Page Info */}
+      <div className="pagn-info">
+        <div className="pagination-info">
+          <span>
+            Showing
+            <div className="length">{paginatedUsers.length}</div> out of{" "}
+            {totalItems}
+          </span>
+        </div>
+
+        <div className="pagination" style={{ float: "right" }}>
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="arrow-button"
+          >
+            &lt;
+          </button>
+          {currentPage > 2 && (
+            <>
+              <button
+                onClick={() => handlePageChange(1)}
+                className="page-button"
+              >
+                1
+              </button>
+              {currentPage > 3 && <span className="ellipsis">...</span>}
+            </>
+          )}
+          {Array.from({ length: totalPages }, (_, i) => i + 1)
+            .filter(
+              (page) =>
+                page === currentPage ||
+                page === currentPage - 1 ||
+                page === currentPage + 1
+            )
+            .map((page) => (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`page-button ${
+                  currentPage === page ? "active" : ""
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+          {currentPage < totalPages - 1 && (
+            <>
+              {currentPage < totalPages - 2 && (
+                <span className="ellipsis">...</span>
+              )}
+              <button
+                onClick={() => handlePageChange(totalPages)}
+                className="page-button"
+              >
+                {totalPages}
+              </button>
+            </>
+          )}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="arrow-button"
+          >
+            &gt;
+          </button>
+        </div>
       </div>
-
-      <div className="pagination" style={{ float: 'right' }}>
-  <button
-    onClick={() => handlePageChange(currentPage - 1)}
-    disabled={currentPage === 1}
-    className="arrow-button"
-  >
-    &lt;
-  </button>
-  {currentPage > 2 && (
-    <>
-      <button onClick={() => handlePageChange(1)} className="page-button">
-        1
-      </button>
-      {currentPage > 3 && <span className="ellipsis">...</span>}
-    </>
-  )}
-  {Array.from({ length: totalPages }, (_, i) => i + 1)
-    .filter(
-      (page) =>
-        page === currentPage ||
-        page === currentPage - 1 ||
-        page === currentPage + 1
-    )
-    .map((page) => (
-      <button
-        key={page}
-        onClick={() => handlePageChange(page)}
-        className={`page-button ${currentPage === page ? "active" : ""}`}
-      >
-        {page}
-      </button>
-    ))}
-  {currentPage < totalPages - 1 && (
-    <>
-      {currentPage < totalPages - 2 && <span className="ellipsis">...</span>}
-      <button onClick={() => handlePageChange(totalPages)} className="page-button">
-        {totalPages}
-      </button>
-    </>
-  )}
-  <button
-    onClick={() => handlePageChange(currentPage + 1)}
-    disabled={currentPage === totalPages}
-    className="arrow-button"
-  >
-    &gt;
-  </button>
-</div>
-
-</div>
-
 
       {isFilterOpen && (
         <div className="filter-modal">
@@ -415,9 +423,5 @@ const Home = () => {
     </div>
   );
 };
-// }
 
 export default Home;
-
-
-
