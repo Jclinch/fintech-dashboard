@@ -37,9 +37,9 @@ export function Organization() {
         <DropdownMenuLabel>Select Organization</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Lendsqr</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Irorun</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Lendstar</DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top">AFF</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="bottom">TSMS</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="right">NFF</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -18,11 +18,12 @@ const TopNav: React.FC<TopNavProps> = ({ user }) => {
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/images/Logo.png"
-          width={150}
+          width={50}
           height={40}
           alt="Logo"
           className="cursor-pointer"
         />
+        <h1 className="text-xl font-semibold text-green-900">Next Cash</h1>
       </Link>
 
       {/* Middle - Search bar */}

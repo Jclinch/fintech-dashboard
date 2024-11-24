@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "lendsqr-fe-test",
-  description: "Sunny Ugwu's lendsqr-fe-test",
+  title: "Next Cash",
+  description: "Next Cash User dashboard",
 };
 
 export default function RootLayout({

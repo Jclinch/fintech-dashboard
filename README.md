@@ -1,6 +1,6 @@
-# Lendsqr Frontend Test Project
+# Next Cash
 
-This is a frontend project for a Lendsqr application test, created using the [Next.js](https://nextjs.org) framework and designed to match a Figma design provided for the test.
+This is a frontend project for a Next cash app, created using the [Next.js](https://nextjs.org) framework and designed to match a Figma design provided for the test.
 
 ## Project Overview
 
@@ -26,8 +26,8 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/Jclinch/lendsqr-fe-test.git
-cd lendsqr-fe-test
+git clone https://github.com/Jclinch/Next-cash-dashboard.git
+cd Next-fe-test
 npm install
 # or
 yarn install
@@ -67,7 +67,7 @@ The homepage is located at `app/(root)/page.tsx`.
 
 The project is deployed on Vercel and can be accessed at:
 
-[https://sunny-ugwu-lendsqr-fe-test.vercel.app](https://sunny-ugwu-lendsqr-fe-test.vercel.app)
+....
 
 ## Usage
 
@@ -77,7 +77,7 @@ The project is deployed on Vercel and can be accessed at:
 
 ## Project Purpose
 
-This project was developed as part of an application test for Lendsqr.
+This project was developed as part of an cash for Next.
 
 ## Contact Information
 

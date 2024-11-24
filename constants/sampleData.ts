@@ -1,9 +1,9 @@
 export const users = [
   {
     id: "1",
-    organization: "Lendsqr",
+    organization: "TSMS",
     username: "Adedeji",
-    email: "adedeji@lendsqr.com",
+    email: "adedeji@TSMS.com",
     phoneNumber: "08067890371",
     dateJoined: new Date("May 15, 2020 10:00 AM"),
     formattedDate: "May 15, 2020 10:00 AM",
@@ -35,9 +35,9 @@ export const users = [
   },
   {
     id: "4",
-    organization: "Lendsqr",
+    organization: "TSMS",
     username: "Tosin Dokunmu",
-    email: "tosin@lendsqr.com",
+    email: "tosin@TSMS.com",
     phoneNumber: "07003309226",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -59,9 +59,9 @@ export const users = [
   },
   {
     id: "6",
-    organization: "Lendsqr",
+    organization: "TSMS",
     username: "Tosin Dokunmu",
-    email: "tosin@lendsqr.com",
+    email: "tosin@TSMS.com",
     phoneNumber: "08067809321",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -83,9 +83,9 @@ export const users = [
   },
   {
     id: "8",
-    organization: "Lendsqr",
+    organization: "TSMS",
     username: "Tosin Dokunmu",
-    email: "tosin@lendsqr.com",
+    email: "tosin@TSMS.com",
     phoneNumber: "08067809321",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -115,7 +115,7 @@ export const users = [
       Math.floor(Math.random() * 60)  // random minute
     );
     return {
-      organization: ["Lendsqr", "Irorun", "Lendstar"][
+      organization: ["TSMS", "Irorun", "Lendstar"][
         Math.floor(Math.random() * 3)
       ],
       id: `${i + 10}`,

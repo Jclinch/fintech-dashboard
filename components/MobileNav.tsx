@@ -74,12 +74,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ user }) => {
         </SheetTrigger>
         <SheetContent side="left" className="sheet-content">
           <SheetTitle></SheetTitle>
-          <Link href="/" className="logo-container">
+          <Link href="/" className="logo-container ">
             <Image
               src="/images/Logo.png"
               width={55}
               height={55}
-              alt="Lendsqr Logo"
+              alt="Next Logo"
             />
             <h1 className="logo-title">{user.name}</h1>
           </Link>
