@@ -12,9 +12,9 @@ export const users = [
   },
   {
     id: "2",
-    organization: "Irorun",
+    organization: "NFF",
     username: "Debby Ogana",
-    email: "debby@irorun.com",
+    email: "debby@NFF.com",
     phoneNumber: "08167089028",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -23,9 +23,9 @@ export const users = [
   },
   {
     id: "3",
-    organization: "Lendstar",
+    organization: "AFF",
     username: "Grace Effiom",
-    email: "grace@lendstar.com",
+    email: "grace@AFF.com",
     phoneNumber: "07067809222",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -47,9 +47,9 @@ export const users = [
   },
   {
     id: "5",
-    organization: "Lendstar",
+    organization: "AFF",
     username: "Grace Effiom",
-    email: "grace@lendstar.com",
+    email: "grace@AFF.com",
     phoneNumber: "08067809321",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -71,9 +71,9 @@ export const users = [
   },
   {
     id: "7",
-    organization: "Lendstar",
+    organization: "AFF",
     username: "Grace Effiom",
-    email: "grace@lendstar.com",
+    email: "grace@AFF.com",
     phoneNumber: "08067809321",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -95,9 +95,9 @@ export const users = [
   },
   {
     id: "9",
-    organization: "Lendstar",
+    organization: "AFF",
     username: "Grace Effiom",
-    email: "grace@lendstar.com",
+    email: "grace@AFF.com",
     phoneNumber: "08067809321",
     dateJoined: new Date("Apr 30, 2020 10:00 AM"),
     formattedDate: "Apr 30, 2020 10:00 AM",
@@ -115,7 +115,7 @@ export const users = [
       Math.floor(Math.random() * 60)  // random minute
     );
     return {
-      organization: ["TSMS", "Irorun", "Lendstar"][
+      organization: ["TSMS", "NFF", "AFF"][
         Math.floor(Math.random() * 3)
       ],
       id: `${i + 10}`,

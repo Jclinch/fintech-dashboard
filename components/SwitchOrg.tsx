@@ -35,7 +35,7 @@ export function SwitchOrg() {
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
           <DropdownMenuRadioItem value="top">Lendsqr</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="bottom">Irorun</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Lendstar</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="right">AFF</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
